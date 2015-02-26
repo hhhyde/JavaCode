@@ -4,17 +4,17 @@ import java.io.IOException;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.jsoup.select.Elements;
 
 public class JSoupTest {
 	public static void main(String[] args) {
 		Document doc;
 		try {
-			doc = Jsoup.connect("http://en.wikipedia.org/").get();
-			Elements newsHeadlines = doc.select("#mp-itn b a");
-			System.out.println(newsHeadlines);
+			StringBuffer sBuffe = new StringBuffer();
+			sBuffe.append("232");
+			doc = Jsoup.connect("http://club.jd.com/bbs/885047-1-1-4.html").get();
+//			 Elements newsHeadlines = doc.select("#mp-itn b a");
+			System.out.println(doc);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
